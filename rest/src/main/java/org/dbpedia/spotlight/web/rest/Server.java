@@ -45,6 +45,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.worksap.nlp.sudachi.Tokenizer;
 
 /**
  * Instantiates Web Service that will execute annotation and disambiguation tasks.
@@ -57,6 +58,7 @@ public class Server {
     static Log LOG = LogFactory.getLog(Server.class);
 
     public static final String APPLICATION_PATH = "http://spotlight.dbpedia.org/rest";
+//public static final String APPLICATION_PATH = "http://localhost:8888/rest";
 
     // Server reads configuration parameters into this static configuration object that will be used by other classes downstream
     protected static SpotlightConfiguration configuration;
@@ -106,6 +108,7 @@ public class Server {
         threadSelector.start();
 
         System.err.println("Server started in " + System.getProperty("user.dir") + " listening on " + serverURI);
+
 
         LOG.info(String.format(" Core threads: %d", threadSelector.getCoreThreads()));
         LOG.info(String.format("  Max threads: %d", threadSelector.getMaxThreads()));

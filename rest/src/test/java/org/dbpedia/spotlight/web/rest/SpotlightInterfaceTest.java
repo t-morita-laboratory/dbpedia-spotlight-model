@@ -34,7 +34,7 @@ public class SpotlightInterfaceTest {
         when(server.getSpotter(DEFAULT_SPOTTER)).thenReturn(new SpotXmlParser());
 
         String text = "Test";
-        String inUrl = "";
+        String inUrl = "http://localhost:8888/";
         double confidence = 0;
         int support = 0;
         String dbpediaTypesString = "";
