@@ -1,18 +1,9 @@
 
+sudachi : https://github.com/WorksApplications/Sudachi#sudachi-%E6%97%A5%E6%9C%AC%E8%AA%9Ereadme
 
-## Licenses
+system_core.dicをdbpedia-spotlight-modelディレクトリ直下に
 
-All the original code produced for DBpedia Spotlight Model is licensed under  [Apache License, 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+入力 : ja_sudachi/model 
+       http://0.0.0.0:80/rest
 
-## Documentation
-
-More documentation is available from the [DBpedia Spotlight wiki](https://github.com/dbpedia-spotlight/dbpedia-spotlight/wiki).
-
-## FAQ
-
-Check the [FAQ here](https://github.com/dbpedia-spotlight/dbpedia-spotlight/wiki/faq)
-
-
-## Maintainers
-
-<a href="http://infai.org"><img src="https://infai.org/wp-content/uploads/2017/08/InfAI-Logo.png" align="left" height="20%" width="20%" ></a>
+http://localhost/rest/annotate?text=テキスト
