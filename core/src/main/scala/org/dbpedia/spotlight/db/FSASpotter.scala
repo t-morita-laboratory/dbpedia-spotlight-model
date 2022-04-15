@@ -149,7 +149,6 @@ object FSASpotter {
         z+=1
         if ((z % 100000) == 0)
           System.err.println("Processed %d SFs.".format(z))
-
         val ids = tokens.map(_.tokenType.id).toArray
 
         //For each token in the SF, add the transitions to the FSA:

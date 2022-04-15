@@ -2,6 +2,7 @@ package org.dbpedia.spotlight.db.model
 
 import opennlp.tools.util.Span
 import org.dbpedia.spotlight.model.Text
+import com.worksap.nlp.sudachi
 
 trait StringTokenizer {
 

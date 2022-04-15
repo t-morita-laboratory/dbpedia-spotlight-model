@@ -70,7 +70,7 @@ public class SpotterConfiguration {
         try {
             config.load(new FileInputStream(new File(fileName)));
         } catch (IOException e) {
-            throw new ConfigurationException("Cannot find configuration file "+fileName,e);
+            //throw new ConfigurationException("Cannot find configuration file "+fileName,e);
         }
 
         // Validate spotters

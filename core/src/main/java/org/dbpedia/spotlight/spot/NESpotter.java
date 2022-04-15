@@ -144,7 +144,6 @@ public class NESpotter implements Spotter {
         }
 
         NameFinderME finder = new NameFinderME((TokenNameFinderModel)nameFinderModel);
-
         List<SurfaceFormOccurrence> sfOccurrences = new ArrayList<SurfaceFormOccurrence>();
         Tokenizer tokenizer = new SimpleTokenizer();
         for (int i = 0; i < sentences.length; i++) {
@@ -172,7 +171,7 @@ public class NESpotter implements Spotter {
                     if (surfaceFormStr.contains(".")) {
                     	surfaceFormStr = correctPhrase(surfaceFormStr, sentence);
                     }
-                    
+
                     int entStart = sentencePositions[i] + tokenspan[span.getStart()].getStart();
                     int entEnd = sentencePositions[i] +tokenspan[span.getEnd()-1].getEnd();
 
@@ -212,6 +211,6 @@ public class NESpotter implements Spotter {
 		//System.out.println(phrs);
 		return phrs;
 	}
-   
+
 
 }

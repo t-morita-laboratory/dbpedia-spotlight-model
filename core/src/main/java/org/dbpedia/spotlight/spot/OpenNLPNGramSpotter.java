@@ -96,7 +96,7 @@ public class OpenNLPNGramSpotter implements Spotter {
 	public List<SurfaceFormOccurrence> extract(Text text) {
 
 		//System.out.println("\n\nRR- extract(...) method called! with text: " + intext + "\n\n");
-       
+
 		//remove special chars from input text, and keep a list of positions of them n a list.
 		//start/end offsets need to be adjusted after extracting spots from cleaned text.
 		String orgText = text.text();
@@ -112,8 +112,8 @@ public class OpenNLPNGramSpotter implements Spotter {
 			System.out.println(ng.surfaceForm() + " [" + ng.textOffset() + "]");
 		}
 		 */
-		
-		
+
+
 		if (npNgrams != null && !npNgrams.isEmpty()) {
 			//lets correct the offsets
 			for( SurfaceFormOccurrence ng: npNgrams) {
@@ -123,7 +123,7 @@ public class OpenNLPNGramSpotter implements Spotter {
 				//System.out.println(ng.surfaceForm() + " [" + ng.textOffset() + "]");
 			}
 
-			
+
 			return npNgrams;
 		}
 		else {
@@ -143,7 +143,7 @@ public class OpenNLPNGramSpotter implements Spotter {
     }
 
 
-	/**Extracts noun-phrase n-grams from the given piece of input text. 
+	/**Extracts noun-phrase n-grams from the given piece of input text.
 	 * @param text  A Text object containing the input from where to extract NP n-grams
 	 * @return A list of SurfaceFormOccurrence objects.
 	 */
@@ -184,7 +184,7 @@ public class OpenNLPNGramSpotter implements Spotter {
 		}
 		return npNgramSFLst;
 	}
-	
+
 	public void extractNGrams(List<Map<String,Integer>> ngrampos, int start, Text text, Span[] tokSpans, List<SurfaceFormOccurrence> sfOccurrences) {
 		String intext = text.text();
         for( Map<String,Integer> mapelem: ngrampos) {
@@ -215,7 +215,7 @@ public class OpenNLPNGramSpotter implements Spotter {
 			String endtknTxt = intext.substring(endtkn_begin,endtkn_end);
 			if (isStopWord(endtknTxt)) ignorephrase = true;
 
-			if (!ignorephrase) {								
+			if (!ignorephrase) {
 				NGram ng = new NGram(txtform, begin, end);
 				SurfaceForm surfaceForm = new SurfaceForm(ng.getTextform());
 
@@ -228,7 +228,7 @@ public class OpenNLPNGramSpotter implements Spotter {
 			}
 		}
 	}
-	  
+
 	/**Generates a list of start/end tokens (indexes) of all sub=phrases/n-grams, given start and end token indexes
 	 * e.g. if start token index and end token index are 5 and 7 (means token 5,6 and 7 makes up a noun phrase)
 	 *      then generate [5], [5,6], [5,6,7], [6], [6,7] and [7] as sub-phrases (n-grams) of the the original phrase.
@@ -252,7 +252,7 @@ public class OpenNLPNGramSpotter implements Spotter {
 			}
 		}
 		return ngrampos1;
-	}	
+	}
 
 	/**Uses the stopWords from Lucene (StopAnalyzer.ENGLISH_STOP_WORDS_SET) to find if a given piece of text is
 	 * a stopword.
@@ -264,5 +264,5 @@ public class OpenNLPNGramSpotter implements Spotter {
 		ret = stopWords.contains(word.toLowerCase());
 		return ret;
 	}
-	
+
 }

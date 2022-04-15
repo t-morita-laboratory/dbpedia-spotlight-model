@@ -25,7 +25,7 @@
     <parent>
         <groupId>org.dbpedia.spotlight</groupId>
         <artifactId>spotlight</artifactId>
-        <version>1.1</version>
+        <version>1.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -144,8 +144,8 @@
         </dependency>
 
         <dependency>
-            <groupId>opennlp</groupId>
-            <artifactId>maxent</artifactId>
+            <groupId>org.apache.opennlp</groupId>
+            <artifactId>opennlp-maxent</artifactId>
         </dependency>
 
         <dependency>
@@ -224,6 +224,12 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.worksap.nlp</groupId>
+            <artifactId>sudachi</artifactId>
+            <version>0.5.2</version>
         </dependency>
 
 
