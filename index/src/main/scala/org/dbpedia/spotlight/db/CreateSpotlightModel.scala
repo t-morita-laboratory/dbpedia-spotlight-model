@@ -17,7 +17,7 @@ import opennlp.tools.chunker.ChunkerModel
 import stem.SnowballStemmer
 import tokenize._
 import scala.Some
-import scala.collection.immutable.HashMap
+//import scala.collection.immutable.HashMaptoken
 import scala.collection.mutable
 
 /**
@@ -72,6 +72,7 @@ object CreateSpotlightModel {
       }
     }
 
+//    System.out.println(outputFolder.exists())
     if(!outputFolder.mkdir()) {
       System.err.println("Folder %s already exists, I am too afraid to overwrite it!".format(outputFolder.toString))
       System.exit(1)
@@ -89,8 +90,8 @@ object CreateSpotlightModel {
       def getModel(name: String) = opennlpModels.filter(_.getName.endsWith(name)).headOption
 
       try {
-        FileUtils.copyFile(getModel("-token.bin").get, new File(opennlpOut, "token.bin"))
-        FileUtils.copyFile(getModel("-sent.bin").get, new File(opennlpOut, "sent.bin"))
+        FileUtils.copyFile(getModel("token.bin").get, new File(opennlpOut, "token.bin"))
+        FileUtils.copyFile(getModel("sent.bin").get, new File(opennlpOut, "sent.bin"))
       } catch {
         case _: Exception => {
           System.err.println(
@@ -134,7 +135,7 @@ object CreateSpotlightModel {
       )
 
     } else {
-      new LanguageIndependentStringTokenizer(locale, stemmer)
+        new LanguageIndependentStringTokenizer(locale, stemmer)
     }
 
 
@@ -255,7 +256,7 @@ object CreateSpotlightModel {
       )
 
     } else {
-      new LanguageIndependentTokenizer(Set[String](), stemmer, locale, tokenStore)
+        new LanguageIndependentTokenizer(Set[String](), stemmer, locale, tokenStore)
     }
     val fsaDict = FSASpotter.buildDictionary(sfStore, tokenizer)
 

@@ -26,7 +26,6 @@ object SurfaceFormSource {
     sfAndTotalCounts: InputStream,
     wikiClosure: WikipediaToDBpediaClosure = null
   ): Map[SurfaceForm, (Int, Int)] = {
-
     SpotlightLog.info(this.getClass, "Creating SurfaceFormSource...")
 
     val sfMap = new HashMap[SurfaceForm, (Int, Int)]()
@@ -38,7 +37,6 @@ object SurfaceFormSource {
 
         val surfaceform = new SurfaceForm(line(0))
         val countAnnotated = line(1).toInt
-
         //Read only surface forms whose annotated count is not -1 (-1 is used to indicate lowercase counts)
         if (countAnnotated != -1) {
 

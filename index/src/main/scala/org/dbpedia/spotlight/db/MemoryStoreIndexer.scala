@@ -132,7 +132,6 @@ class MemoryStoreIndexer(val baseDir: File, val quantizedCountStore: MemoryQuant
     lowercaseCounts.keySet().filter( s => lowercaseMap.contains(s)).foreach { s: String =>
       howmany += 1
       sfStore.lowercaseMap.put(s, (lowercaseCounts.get(s) +: lowercaseMap.get(s).get.toArray))
-
       if (howmany % 10000 == 0)
         println("Added "+howmany+" lowercase SF")
     }
