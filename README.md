@@ -3,8 +3,9 @@
 ## 必要データのダウンロード  
 
 コードのダウンロード  
-` $ git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git
-  $ cd dbpedia-spotlight-mode && mvn install ` 
+` $ git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git `
+` $ cd dbpedia-spotlight-mode `
+` $ mvn install ` 
 
   
 日本語形態素解析器sudachiの辞書をダウンロード  
