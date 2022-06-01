@@ -2,6 +2,7 @@
 
 ## 必要コードのダウンロード  
 
+データのダウンロード  
 ` $ git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git
   $ cd dbpedia-spotlight-mode && mvn install ` 
 
@@ -11,11 +12,13 @@
 
   
 ダウンロードしたsudachi辞書の解凍  
-` $ tar -zxvf <ファイル名> `  
+` $ tar -zxvf sudachi-dictionary-latest-core.zip `  
 
 ## 実行  
 
-` mvn -pl rest exec:java -Dexec.mainClass=org.dbpedia.spotlight.web.rest.Server -Dexec.args="ja_sudachi/model http://0.0.0.0:2222/rest" `    
+サーバの起動  
+` $ mvn -pl rest exec:java -Dexec.mainClass=org.dbpedia.spotlight.web.rest.Server -Dexec.args="ja_sudachi/model http://0.0.0.0:2222/rest" `    
 
 
+下記のURLにアクセス(<text>の位置に文章を入力)  
 http://localhost:2222/rest/annotate?text=<text>
