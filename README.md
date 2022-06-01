@@ -2,16 +2,18 @@
 
 ## 必要コードのダウンロード  
 
-```git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git```
+``` $ git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git   
+ $ cd dbpedia-spotlight-mode && mvn install```
 
-日本語形態素解析器sudachi(http://sudachi.s3-website-ap-northeast-1.amazonaws.com/sudachidict/) の辞書をダウンロード  
+日本語形態素解析器sudachiの辞書をダウンロード  
+``` $ wget http://sudachi.s3-website-ap-northeast-1.amazonaws.com/sudachidict/sudachi-dictionary-latest-core.zip ```
 
-ダウンロードしたファイルの解凍  
-tar -zxvf <ファイル名>
+ダウンロードしたsudachi辞書の解凍  
+``` $ tar -zxvf <ファイル名>```  
 
-system_core.dicをdbpedia-spotlight-modelディレクトリ直下に
+## 実行  
 
-入力 : ja_sudachi/model 
-       http://0.0.0.0:80/rest
+``` mvn -pl rest exec:java -Dexec.mainClass=org.dbpedia.spotlight.web.rest.Server -Dexec.args="ja_sudachi/model http://0.0.0.0:2222/rest" ```    
 
-http://localhost/rest/annotate?text=テキスト
+
+http://localhost:2222/rest/annotate?text=<text>

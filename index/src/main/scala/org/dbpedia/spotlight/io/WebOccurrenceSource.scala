@@ -194,7 +194,7 @@ object WebOccurrenceSource
             val query = yahooBossSearchUrl + targetUrl + appID + options + "&start=" + start
 
             // establish connection
-            val socket = new Socket("boss.yahooapis.com", 80)
+            val socket = new Socket("boss.yahooapis.com", 2222)
             val printStream = new PrintStream(socket.getOutputStream)
             printStream.print("GET " + query + " HTTP/1.0\r\n")
             printStream.print("Connection: close\r\n\r\n")
