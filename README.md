@@ -1,5 +1,8 @@
+#DBpedia Spotlight Japanese  
 
-sudachi : https://github.com/WorksApplications/Sudachi#sudachi-%E6%97%A5%E6%9C%AC%E8%AA%9Ereadme
+##必要コードのダウンロード  
+
+日本語形態素解析器sudachi(http://sudachi.s3-website-ap-northeast-1.amazonaws.com/sudachidict/)の辞書をダウンロード  
 
 system_core.dicをdbpedia-spotlight-modelディレクトリ直下に
 
