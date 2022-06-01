@@ -1,6 +1,6 @@
 # DBpedia Spotlight Japanese 実行方法
 
-#環境
+# 環境
 maven : 3.8  
 lava : jdk1.8.0  
 
@@ -8,7 +8,7 @@ lava : jdk1.8.0
 
 コードのダウンロード  
 ` $ git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git `  
-` $ cd dbpedia-spotlight-mode `   
+` $ cd dbpedia-spotlight-model `   
 
   
 日本語形態素解析器sudachiの辞書をダウンロード  
@@ -17,9 +17,7 @@ lava : jdk1.8.0
   
 ダウンロードしたsudachi辞書の解凍  
 ` $ unzip sudachi-dictionary-latest-core.zip `  
-` $ cd sudachi-dictionary-XXXXXXXX `  
-` $ mv system_core.dic ../ `  
-` $ cd ../ `  
+` $ mv sudachi-dictionary-XXXXXXXX/system_core.dic ./ `    
 
 ## 実行  
 
