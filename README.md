@@ -1,8 +1,8 @@
-# DBpedia Spotlight Japanese  
+# DBpedia Spotlight Japanese 実行方法
 
-## 必要コードのダウンロード  
+## 必要データのダウンロード  
 
-データのダウンロード  
+コードのダウンロード  
 ` $ git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git
   $ cd dbpedia-spotlight-mode && mvn install ` 
 
@@ -20,5 +20,5 @@
 ` $ mvn -pl rest exec:java -Dexec.mainClass=org.dbpedia.spotlight.web.rest.Server -Dexec.args="ja_sudachi/model http://0.0.0.0:2222/rest" `    
 
 
-下記のURLにアクセス(<text>の位置に文章を入力)  
-http://localhost:2222/rest/annotate?text=<text>
+下記のURLにアクセス({text}の位置に文章を入力)  
+http://localhost:2222/rest/annotate?text={text}
