@@ -2,7 +2,7 @@
 
 ## 必要コードのダウンロード  
 
-~~~git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git~~~
+```git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git```
 
 日本語形態素解析器sudachi(http://sudachi.s3-website-ap-northeast-1.amazonaws.com/sudachidict/) の辞書をダウンロード  
 
