@@ -1,6 +1,6 @@
 # DBpedia Spotlight Japanese 実行方法
 
-# 環境
+## 環境
 maven : 3.8  
 lava : jdk1.8.0  
 
@@ -8,7 +8,8 @@ lava : jdk1.8.0
 
 コードのダウンロード  
 ` $ git clone https://github.com/t-morita-laboratory/dbpedia-spotlight-model.git `  
-` $ cd dbpedia-spotlight-model `   
+` $ cd dbpedia-spotlight-model `  
+` $ mvn install `   
 
   
 日本語形態素解析器sudachiの辞書をダウンロード  
@@ -28,4 +29,4 @@ lava : jdk1.8.0
 下記のURLにアクセス({text}の位置に文章を入力)  
 http://localhost:2222/rest/annotate?text={text}
 
-##モデルの作成
+## モデルの作成
