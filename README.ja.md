@@ -26,7 +26,33 @@ lava : jdk1.8.0
 ` $ mvn -pl rest exec:java -Dexec.mainClass=org.dbpedia.spotlight.web.rest.Server -Dexec.args="ja_sudachi/model http://0.0.0.0:2222/rest" `    
 
 
-下記のURLにアクセス({text}の位置に文章を入力)  
+下記のURLにアクセス ({text}の位置に文章を入力)  
 http://localhost:2222/rest/annotate?text={text}
 
 ## モデルの作成
+
+### Wikipedia記事からの統計情報抽出
+
+` $ git clone https://github.com/dbpedia-spotlight/wikistatsextractor `  
+` $ git clone https://github.com/dbpedia-spotlight/model-quickstarter `  
+` $ wget https://dumps.wikimedia.org/jawiki/latest/jawiki-latest-pages-articles.xml.bz2 ` 
+` $ bzip2 -d jawiki-latest-pages-articles.xml.bz2 `  
+` $ cd wikistatsextractor `  
+` $ mvn install `  
+` $ mvn exec:java -Dexec.args="--output_folder ja ja_JP None ../jawiki-latest-pages-articles.xml ../model-quickstarter/ja/stopwords.list `  
+
+
+
+### 構築
+` $ mkdir date && cd date `  
+` $ wget https://downloads.dbpedia.org/2016-10/core-i18n/ja/disambiguations_ja.ttl.bz2 `  
+` $ wget https://downloads.dbpedia.org/2016-10/core-i18n/ja/instance_types_ja.ttl.bz2 `  
+` $ wget https://downloads.dbpedia.org/2016-10/core-i18n/ja/instance_types_transitive_ja.ttl.bz2 `  
+` $ wget https://downloads.dbpedia.org/2016-10/core-i18n/ja/redirects_ja_ttl.bz2 `  
+` $ bzcat disambiguations_ja.ttl.bz2 disambiguations.nt `  
+` $ bzcat instance_types_ja.ttl.bz2 instance_types.tmp `  
+` $ bzcat instance_types_transitive_ja.ttl.bz2 instance_types_transitive.tmp `  
+` $ bzcat redirects_ja_ttl.bz2 redirects.nt `  
+` $ cat instance_types_transitive.tmp >> instance_types.tmp && cat instance_types.tmp | sort > instance_types.nt `  
+` $ cd ../ `  
+` $ mvn exec:java -Dexec.args="--output_folder ja_JP date/ model/ None ../model-quickstarter/ja/stopwords.list None `  
