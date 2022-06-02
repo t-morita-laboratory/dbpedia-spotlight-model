@@ -51,7 +51,7 @@ http://localhost:2222/rest/annotate?text={text}
 ### 構築
 
 DBpedia各種データのダウンロード、解凍  
-` $ cd dbdata `  
+` $ cd data `  
 ` $ wget https://downloads.dbpedia.org/2016-10/core-i18n/ja/disambiguations_ja.ttl.bz2 `  
 ` $ wget https://downloads.dbpedia.org/2016-10/core-i18n/ja/instance_types_ja.ttl.bz2 `  
 ` $ wget https://downloads.dbpedia.org/2016-10/core-i18n/ja/instance_types_transitive_ja.ttl.bz2 `  
