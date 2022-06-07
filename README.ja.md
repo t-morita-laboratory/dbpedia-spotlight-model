@@ -7,8 +7,8 @@
 
 ## 環境
 DBpedia Spotlight :  
-maven : 3.8  
-lava : jdk1.8.0  
+maven : 3.1, or later  
+lava : jdk1.8
 
 
 ## 必要データのダウンロード  
