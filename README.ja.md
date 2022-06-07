@@ -36,17 +36,6 @@ http://localhost:2222/rest/annotate?text={text}
 ` $ curl http://localhost:2222/rest/annotate?text={text} `  
 出力 (text=青学と横浜線)  
 
-<?xml version="1.0" encoding="UTF-8"?>  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">  
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:lexvo="http://lexvo.org/ontology#" xmlns:dbpedia="http://dbpedia.org/resource/" xmlns:dbpo="http://dbpedia.org/ontology/">  
-<head>  
-<title>DBpedia Spotlight annotation</title>  
-</head>  
-<body>  
-<div>  
-<a about="http://ja.dbpedia.org/resource/青山学院大学" typeof="http://dbpedia.org/ontology/Agent" href="http://ja.dbpedia.org/resource/青山学院大学" title="http://ja.dbpedia.org/resource/青山学院大学">青学</a>と<a about="http://ja.dbpedia.org/resource/横浜線" typeof="http://dbpedia.org/ontology/RailwayLine" href="http://ja.dbpedia.org/resource/横浜線" title="http://ja.dbpedia.org/resource/横浜線">横浜線</a>  
-</div>  
-</body>  
 
 ## モデルの作成
 
