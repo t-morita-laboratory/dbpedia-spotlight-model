@@ -6,7 +6,7 @@
 モデル作成から行う場合は  **必要データのダウンロード** → **モデルの作成** → **実行**  
 
 ## 環境
-DBpedia Spotlight :  
+
 maven : 3.1, or later  
 lava : jdk1.8
 
