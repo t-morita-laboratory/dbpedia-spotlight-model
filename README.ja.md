@@ -1,9 +1,12 @@
-# DBpedia Spotlight Japanese 実行方法
+# 日本語DBpedia Spotlight実行方法
+
+日本語DBpedia Spotlightでは、DBpediaを対象としたエンティティリンキングツールであるDBpediaに日本語形態素解析器Sudachiを導入し、日本語に特化したエンティティリンキングを行う  
 
 作成済みモデルを使う場合は  **必要データのダウンロード** → **実行**  
 モデル作成から行う場合は  **必要データのダウンロード** → **モデルの作成** → **実行**  
 
 ## 環境
+DBpedia Spotlight :
 maven : 3.8  
 lava : jdk1.8.0  
 
@@ -27,7 +30,13 @@ lava : jdk1.8.0
 ` $ mvn -pl rest exec:java -Dexec.mainClass=org.dbpedia.spotlight.web.rest.Server -Dexec.args="ja_sudachi/model http://0.0.0.0:2222/rest" `    
 
 下記のURLにアクセス ({text}の位置に文章を入力)  
-http://localhost:2222/rest/annotate?text={text}
+http://localhost:2222/rest/annotate?text={text}  
+
+またはコマンドでの実行({text}には％エンコードされた文章を入力)  
+' $ curl http://localhost:2222/rest/annotate?text={text} '  
+
+
+### 実行例
 
 
 ## モデルの作成
@@ -64,4 +73,9 @@ DBpedia各種データのダウンロード、解凍
 
 モデルの構築  
 ` $ cd ../ `  
-` $ mvn exec:java -Dexec.args="--output_folder ja_JP dbdata/ model/ None ../model-quickstarter/ja/stopwords.list None" `  
+` $ mvn exec:java -Dexec.args="--output_folder ja_JP dbdata/ model/ None ../model-quickstarter/ja/stopwords.list None"
+
+
+## Licenses  
+
+All the original code produced for DBpedia Spotlight Model is licensed under Apache License, 2.0.
