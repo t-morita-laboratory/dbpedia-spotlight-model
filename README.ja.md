@@ -6,7 +6,7 @@
 モデル作成から行う場合は  **必要データのダウンロード** → **モデルの作成** → **実行**  
 
 ## 環境
-DBpedia Spotlight :
+DBpedia Spotlight :  
 maven : 3.8  
 lava : jdk1.8.0  
 
@@ -33,7 +33,7 @@ lava : jdk1.8.0
 http://localhost:2222/rest/annotate?text={text}  
 
 またはコマンドでの実行({text}には％エンコードされた文章を入力)  
-' $ curl http://localhost:2222/rest/annotate?text={text} '  
+` $ curl http://localhost:2222/rest/annotate?text={text} `  
 
 
 ### 実行例
