@@ -36,8 +36,8 @@ http://localhost:2222/rest/annotate?text={text}
 ` $ curl http://localhost:2222/rest/annotate?text={text} `  
 
 出力例 (text=新幹線のぞみで人工知能学会全国大会にやってきた)  
-`$ curl http://localhost:2222/rest/annotate?text=%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%81%AE%E3%81%9E%E3%81%BF%E3%81%A7%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E5%AD%A6%E4%BC%9A%E5%85%A8%E5%9B%BD%E5%A4%A7%E4%BC%9A%E3%81%AB%E3%82%84%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F
-{"@text":"新幹線のぞみで人工知能学会全国大会にやってきた","@confidence":"0.5","@support":"0","@types":"","@sparql":"","@policy":"whitelist","Resources":[{"@URI":"http://ja.dbpedia.org/resource/のぞみ_(列車)","@support":"1518","@types":"","@surfaceForm":"のぞみ","@offset":"3","@similarityScore":"0.9950609447494613","@percentageOfSecondRank":"0.0017892842055981617"},{"@URI":"http://ja.dbpedia.org/resource/人工知能学会","@support":"104","@types":"","@surfaceForm":"人工知能学会","@offset":"7","@similarityScore":"0.9999998190000974","@percentageOfSecondRank":"0.0"}]}`  
+``` $ curl http://localhost:2222/rest/annotate?text=%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%81%AE%E3%81%9E%E3%81%BF%E3%81%A7%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E5%AD%A6%E4%BC%9A%E5%85%A8%E5%9B%BD%E5%A4%A7%E4%BC%9A%E3%81%AB%E3%82%84%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F
+{"@text":"新幹線のぞみで人工知能学会全国大会にやってきた","@confidence":"0.5","@support":"0","@types":"","@sparql":"","@policy":"whitelist","Resources":[{"@URI":"http://ja.dbpedia.org/resource/のぞみ_(列車)","@support":"1518","@types":"","@surfaceForm":"のぞみ","@offset":"3","@similarityScore":"0.9950609447494613","@percentageOfSecondRank":"0.0017892842055981617"},{"@URI":"http://ja.dbpedia.org/resource/人工知能学会","@support":"104","@types":"","@surfaceForm":"人工知能学会","@offset":"7","@similarityScore":"0.9999998190000974","@percentageOfSecondRank":"0.0"}]} ```  
 
 
 
@@ -72,7 +72,7 @@ DBpedia各種データのダウンロード、解凍
 
 モデルの構築  
 ` $ cd ../ `  
-` $ mvn exec:java -Dexec.args="--output_folder ja_JP dbdata/ model/ None ../model-quickstarter/ja/stopwords.list None"
+` $ mvn exec:java -Dexec.args="--output_folder ja_JP dbdata/ model/ None ../model-quickstarter/ja/stopwords.list None" `  
 
 
 ## Licenses  
