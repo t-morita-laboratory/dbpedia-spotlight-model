@@ -8,7 +8,7 @@
 ## 動作環境
 
 maven : 3.1, or later  
-lava Development Kit(JDK): JDK 1.8
+Java Development Kit (JDK): JDK 1.8
 
 
 ## インストール  
